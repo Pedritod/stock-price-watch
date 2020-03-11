@@ -12,6 +12,8 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 public class StockWatch {
+    private long id;
+
     @NotEmpty(message = "Symbol must be given.")
     private String symbol;
 

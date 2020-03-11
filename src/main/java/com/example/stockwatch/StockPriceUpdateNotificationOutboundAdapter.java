@@ -22,10 +22,10 @@ public class StockPriceUpdateNotificationOutboundAdapter {
         MessageChannel stockpriceUpdateNotification();
     }
 
-    StockPriceUpdateNotificationBinder binder;
+    private final StockPriceUpdateNotificationBinder binder;
 
-    public void send(StockPriceUpdate priceUpdateAlarm) {
-        Message<?> message = MessageBuilder.withPayload(priceUpdateAlarm).setHeader("alarmId", priceUpdateAlarm.getStockWatchId()).build();
+    public void send(StockPriceUpdateNotification priceUpdateAlarm) {
+        Message<?> message = MessageBuilder.withPayload(priceUpdateAlarm).setHeader("alarmId", 1L).build(); // priceUpdateAlarm.getStockWatchId()).build();
         binder.stockpriceUpdateNotification().send(message);
     }
 }

@@ -1,5 +1,5 @@
 package contracts.stockorder.rest
-import org.springframework.cloud.contract.spec.Contract;
+import org.springframework.cloud.contract.spec.Contract
 
 return [
 Contract.make {
@@ -17,7 +17,7 @@ Contract.make {
     }
     response {
         status OK()
-        body('''{"stockWatchId": 1}''')
+        body('''{"id": 1, "symbol": "AAPL", "limit": 0.01}''')
         headers {
             contentType(applicationJson())
         }
