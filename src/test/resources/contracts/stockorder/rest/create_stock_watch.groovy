@@ -1,4 +1,4 @@
-package contracts
+package contracts.stockorder.rest
 import org.springframework.cloud.contract.spec.Contract;
 
 return [

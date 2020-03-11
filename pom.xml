@@ -82,7 +82,8 @@
 				<extensions>true</extensions>
 				<configuration>
 					<testFramework>JUNIT5</testFramework>
-					<baseClassForTests>com.example.stockwatch.BaseClass</baseClassForTests>
+<!--					<baseClassForTests>com.example.stockwatch.cdc.baseclasses.StockorderRestBase</baseClassForTests>-->
+					<packageWithBaseClasses>com.example.stockwatch.cdc.baseclasses</packageWithBaseClasses>
 				</configuration>
 			</plugin>
 			<plugin>
