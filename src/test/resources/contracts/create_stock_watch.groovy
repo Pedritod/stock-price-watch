@@ -1,7 +1,8 @@
 package contracts
 import org.springframework.cloud.contract.spec.Contract;
 
-org.springframework.cloud.contract.spec.Contract happyPath = Contract.make {
+return [
+Contract.make {
     description("Contract for creating a new stock watch")
     name("create_new_stock_watch_succeeds")
     request {
@@ -21,9 +22,9 @@ org.springframework.cloud.contract.spec.Contract happyPath = Contract.make {
             contentType(applicationJson())
         }
     }
-}
+},
 
-org.springframework.cloud.contract.spec.Contract missingSymbol =  Contract.make {
+Contract.make {
     description("Contract for creating a new stock watch with missing symbol")
     name("create_new_stock_watch_fails_because_of_missing_symbol")
     request {
@@ -43,9 +44,9 @@ org.springframework.cloud.contract.spec.Contract missingSymbol =  Contract.make 
             contentType(textPlain())
         }
     }
-}
+},
 
-org.springframework.cloud.contract.spec.Contract missingLimit =  Contract.make {
+Contract.make {
     description("Contract for creating a new stock watch with limit below 0.01")
     name("create_new_stock_watch_fails_because_of_limit_below_min")
     request {
@@ -66,6 +67,7 @@ org.springframework.cloud.contract.spec.Contract missingLimit =  Contract.make {
         }
     }
 }
+]
 
 
 
